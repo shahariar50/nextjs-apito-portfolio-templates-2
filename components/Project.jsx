@@ -1,6 +1,15 @@
 import React from "react";
+import Slider from "react-slick";
 
 const Project = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <section className="project py-5" id="project">
       <div className="container">
@@ -10,7 +19,7 @@ const Project = () => {
               <h2>Things I have designed for digital media agencies</h2>
             </div>
 
-            <div className="owl-carousel owl-theme">
+            <Slider {...settings} className="owl-carousel owl-theme">
               <div className="item">
                 <div className="project-info">
                   <picture>
@@ -70,7 +79,7 @@ const Project = () => {
                   </picture>
                 </div>
               </div>
-            </div>
+            </Slider>
           </div>
         </div>
       </div>
